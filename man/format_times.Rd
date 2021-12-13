@@ -7,11 +7,17 @@
 format_times(meeting_date, start_time, end_time, tzone, tzones)
 }
 \arguments{
+\item{meeting_date}{The date of the meeting in ISO 8601 format (i.e.,
+"YYYY-MM-DD")}
+
 \item{start_time}{String with the start time in the time zone \code{tzone}.
 Use 24-hour time. (I.e., "13:00" not "1:00 PM").}
 
 \item{end_time}{String with the start time in the time zone \code{tzone}. Use
 24-hour time.}
+
+\item{tzone}{the time zone that the start and end times are in see the link
+in \code{tzones} for names to use.}
 
 \item{tzones}{The time zones you wish to display. See
 \url{https://en.wikipedia.org/wiki/List_of_tz_database_time_zones} for time
