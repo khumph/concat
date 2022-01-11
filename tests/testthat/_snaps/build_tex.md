@@ -1,3 +1,19 @@
+# Middle is created with only sections
+
+    Code
+      cat(paste_middle(tlfs))
+    Output
+      \phantomsection
+      \addcontentsline{toc}{section}{Section}
+      \phantomsection
+      \addcontentsline{toc}{subsection}{One}
+      \includepdf[pages=-, pagecommand = {}]{Folder/file.pdf}
+      
+      \phantomsection
+      \addcontentsline{toc}{subsection}{Two}
+      \includepdf[pages=-, pagecommand = {}]{Folder/file2.pdf}
+      
+
 # Tex is created
 
     Code
@@ -14,6 +30,8 @@
       
       \begin{document}
       
+      \phantomsection
+      \addcontentsline{toc}{section}{Section}
       \phantomsection
       \addcontentsline{toc}{subsection}{One}
       \includepdf[pages=-, pagecommand = {}]{Folder/file.pdf}
@@ -52,6 +70,8 @@
       % ----------------------------------------------------------------------------
       
       \phantomsection
+      \addcontentsline{toc}{section}{Section}
+      \phantomsection
       \addcontentsline{toc}{subsection}{One}
       \includepdf[pages=-, pagecommand = {}]{Folder/file.pdf}
       
@@ -86,6 +106,8 @@
       
       \end{titlepage}
       
+      \phantomsection
+      \addcontentsline{toc}{section}{Section}
       \phantomsection
       \addcontentsline{toc}{subsection}{One}
       \includepdf[pages=-, pagecommand = {}]{Folder/file.pdf}

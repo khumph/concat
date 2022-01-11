@@ -1,7 +1,17 @@
 tlfs <- data.frame(
-  title = c("One", "Two"),
+  section = c("Section", NA_character_),
+  subsection = c("One", "Two"),
   path = c("Folder/file.pdf", "Folder/file2.pdf")
 )
+
+test_that("", {
+  expect_equal(add_section("section", tlfs),
+               c("\\phantomsection\n\\addcontentsline{toc}{section}{Section}\n", ""))
+})
+
+test_that("Middle is created with only sections", {
+  expect_snapshot(cat(paste_middle(tlfs)))
+})
 
 test_that("Tex is created", {
   expect_snapshot(cat(paste_tex(tlfs, toc = FALSE, coverpage = NULL)))

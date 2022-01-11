@@ -26,7 +26,7 @@ format_pps <- function(pps, open_closed, path_prod) {
   out$path <- file.path(path_prod, out$dir, "Output", paste0(out$path, ".pdf"))
   out$path <- normalizePath(out$path)
   out$dir <- NULL
-  names(out) <- c("title", "path")
+  names(out) <- c("subsection", "path")
   return(out)
 }
 
