@@ -4,7 +4,15 @@
 \alias{concat}
 \title{Concatenate PDF via LaTeX}
 \usage{
-concat(path_tlf_csv, toc = TRUE, coverpage = NULL, path_tex, path_pdf, ...)
+concat(
+  path_tlf_csv,
+  toc = TRUE,
+  coverpage = NULL,
+  path_tex,
+  path_pdf,
+  min_times = 2,
+  ...
+)
 }
 \arguments{
 \item{path_tlf_csv}{Path to a CSV file with with two columns: "title" with
@@ -18,6 +26,10 @@ E.g., generated using \code{\link[concat]{add_cover_tex}}}
 \item{path_tex}{The path to output the LaTeX document}
 
 \item{path_pdf}{The path to output the PDF document}
+
+\item{min_times}{The minimum and maximum number of times to rerun the LaTeX
+engine when using emulation. Needs to be at least 2 for correct page
+numbers in multi-page tables of contents.}
 
 \item{...}{Further arguments passed to \code{\link[tinytex]{pdflatex}}}
 }
