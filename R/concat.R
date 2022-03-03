@@ -11,5 +11,5 @@
 #' @export
 concat <- function(path_tlf_csv, toc = TRUE, coverpage = NULL, path_tex, path_pdf, ...) {
   build_tex(path_tlf_csv, toc, coverpage, path_tex)
-  tinytex::pdflatex(path_tex, pdf_file = path_pdf, ...)
+  tinytex::pdflatex(path_tex, min_times = 2, pdf_file = path_pdf, ...)
 }
